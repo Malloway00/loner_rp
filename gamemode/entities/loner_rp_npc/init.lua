@@ -1,0 +1,1 @@
+-- Serverside NPC code placeholder
