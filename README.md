@@ -9,3 +9,6 @@ See `docs/Gmod_How_To.md` for the full research guide.
 3. Open the console and type `lua_openscript_cl autorun/client/loner_rp.lua` to hot-load code edits
     or use GMod's auto-refresh.
 
+## Player Data Location
+Player progress is saved server-side in `garrysmod/data/loner_rp/<SteamID64>.txt`.
+
