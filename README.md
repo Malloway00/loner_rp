@@ -5,7 +5,7 @@ See `docs/Gmod_How_To.md` for the full research guide.
 
 ## Quick start
 1. Copy `loner_rp` into `garrysmod/gamemodes/`.
-2. Launch GMod and select **LonerRP** under single‑player gamemodes.
-3. Open the console and type `lua_openscript_cl autorun/client/???` to hot‑load code edits
-   or use GMOD's auto‑refresh.
+2. Launch GMod, start a single-player game, and choose **LonerRP** as the gamemode.
+3. Open the console and type `lua_openscript_cl autorun/client/loner_rp.lua` to hot-load code edits
+    or use GMod's auto-refresh.
 
