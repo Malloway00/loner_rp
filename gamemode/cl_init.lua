@@ -1,8 +1,14 @@
 include("shared.lua")
 
 hook.Add("HUDPaint", "DrawCash", function()
-    local cash = LocalPlayer():GetNWInt("cash", 0)
-    draw.SimpleText("$"..cash, "Trebuchet24", 10, 10, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+    local ply = LocalPlayer()
+    local cash = ply:GetNWInt("cash", 0)
+    draw.SimpleText("$" .. cash, "Trebuchet24", 10, 10, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
+
+    local jobId = ply:GetNWString("job", "citizen")
+    local jobTbl = g_JOBS[jobId]
+    local jobName = jobTbl and jobTbl.name or jobId
+    draw.SimpleText("Job: " .. jobName, "Trebuchet24", 10, 30, color_white, TEXT_ALIGN_LEFT, TEXT_ALIGN_TOP)
 end)
 
 local function OpenJobMenu()
