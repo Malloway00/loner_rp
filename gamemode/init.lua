@@ -6,7 +6,7 @@ util.AddNetworkString("change_job")
 util.AddNetworkString("open_npc_menu")
 
 local function loadPlayerData(ply)
-    local path = "loner_rp/playerdata/" .. ply:SteamID64() .. ".json"
+    local path = "loner_rp/" .. ply:SteamID64() .. ".txt"
     if file.Exists(path, "DATA") then
         local tbl = util.JSONToTable(file.Read(path, "DATA")) or {}
         ply:SetMoney(tbl.money or 500)
@@ -41,8 +41,8 @@ net.Receive("change_job", function(len, ply)
 end)
 
 function GM:PlayerDisconnected(ply)
-    local path = "loner_rp/playerdata/" .. ply:SteamID64() .. ".json"
-    file.CreateDir("loner_rp/playerdata")
+    local path = "loner_rp/" .. ply:SteamID64() .. ".txt"
+    file.CreateDir("loner_rp")
     local data = {
         money = ply:GetMoney(),
         job = ply:GetNWString("job", "citizen")
