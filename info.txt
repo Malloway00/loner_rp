@@ -1,0 +1,5 @@
+"name" "LonerRP"
+"author" "YourName"
+"version" "0.1"
+"description" "Single-player DarkRP-style gamemode"
+"category" "rp"
